@@ -1,0 +1,1570 @@
+
+* My text document is very long due to the fact that I did defining diagrams,
+  Solution algorithms, and testing for each one of my three Mad-Libs contained
+  in my "website". Thank You.
+
+
+Lab Problem Statement
+
+I would like to create a web based series of Mad-Libs. First the program will 
+alert the user a welcome message once they pick the madlib they want. Next the
+program prompts the user to enter keywords, such as nouns, plural nouns, 
+verbs, etc., that will be missing from a short story, but if it is the first prompt
+of that keyword the prompt will be a little more informative. If the user tries to
+leave a prompt blank, the program will alert the user that they must answer all 
+prompts by sending a warning message. When all prompts are complete, the program 
+will once again alert the user they are done entering text with a completed message. 
+The program will then take the user-entered keywords and compile them into a full story. The 
+program will then display the story.
+
+
+1. Nouns and Verbs
+
+PROBLEM STATEMENT:
+
+I would like to create a web based series of Mad-Libs. First the program will 
+alert the user a welcome message once they pick the madlib they want. Next the
+program prompts the user to enter keywords, such as nouns, plural nouns, 
+verbs, etc., that will be missing from a short story, but if it is the first prompt
+of that keyword the prompt will be a little more informative. If the user tries to
+leave a prompt blank, the program will alert the user that they must answer all 
+prompts by sending a warning message. When all prompts are complete, the program 
+will once again alert the user they are done entering text with a completed message. 
+The program will then take the user-entered keywords and compile them into a full story. The 
+program will then display the story.
+
+
+NOUNS:
+  welcome alert, keywords(such as nouns, plural nouns, verbs, etc.), warning alert, 
+  completed alert, story
+
+VERBS:
+  alert, prompt, compile, display
+
+
+2a. Defining Diagram for Medieval Mad-Lib
+  
+  INPUTS:
+    userInput (used in each function as different keyword)
+  
+  PROCESSING:
+  
+  MedievalMadLib
+  
+    enterNouns
+      initialize counter to 1
+      initialize inputNouns array
+      initialize userInput
+      
+      WHILE counter <= 12
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputNouns array
+        ENDIF
+      ENDWHILE
+      return inputNouns
+    END
+    
+    enterPluralNouns
+      initialize counter to 1
+      initialize inputPluralNouns array
+      initialize userInput
+      
+      WHILE counter <= 6
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputPluralNouns array
+        ENDIF
+      ENDWHILE
+      return inputPluralNouns
+    END
+    
+    enterVerbs
+      initialize counter to 1
+      initialize inputVerbs array
+      initialize userInput
+      
+      WHILE counter <= 3
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputVerbs array
+        ENDIF
+      ENDWHILE
+      return inputVerbs
+    END
+    
+    enterColors
+      initialize counter to 1
+      initialize inputColors array
+      initialize userInput
+      
+      WHILE counter <= 5
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputColors array
+        ENDIF
+      ENDWHILE
+      return inputColors
+    END
+    
+    main
+      alert user with intorduction
+     
+      initialize colors
+      intitialize nouns
+      initialize output to ""
+      intitialize pluralNouns
+      initialize verbs
+      
+      set nouns to enterNouns()
+      set pluralNouns to enterPluralNouns()
+      set verbs to enterVerbs()
+      set colors to enterColors()
+      
+      alert user congratulations
+      
+      compile output from array values
+      
+      display output
+    END
+    
+    call main function
+  END
+  
+  OUTPUTS:
+    alert (different alert types),
+    output (a.k.a story)
+  
+  
+2b. Defining Diagram for Outer Space Mad-Lib
+  
+  INPUTS:
+    userInput (used in each function as different keyword)
+    
+  PROCESSING:
+  
+  OuterSpaceMadLib
+  
+    enterNouns
+      initialize counter to 1
+      initialize inputNouns array
+      initialize userInput
+      
+      WHILE counter <= 16
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputNouns array
+        ENDIF
+      ENDWHILE
+      return inputNouns
+    END
+    
+    enterPluralNouns
+      initialize counter to 1
+      initialize inputPluralNouns array
+      initialize userInput
+      
+      WHILE counter <= 6
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputPluralNouns array
+        ENDIF
+      ENDWHILE
+      return inputPluralNouns
+    END
+    
+    enterVerbs
+      initialize counter to 1
+      initialize inputVerbs array
+      initialize userInput
+      
+      WHILE counter <= 2
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputVerbs array
+        ENDIF
+      ENDWHILE
+      return inputVerbs
+    END
+    
+    enterNumbers
+      initialize counter to 1
+      initialize inputNumbers array
+      initialize userInput
+      
+      WHILE counter <= 4
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE IF userInput is Not a Number
+          alert number warning
+        ELSE 
+          add userInput to inputNumbers array
+        ENDIF
+      ENDWHILE
+      return inputNumbers
+    END
+    
+    enterEmotions
+      initialize counter to 1
+      initialize inputEmotions array
+      initialize userInput
+      WHILE counter <= 4
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputEmotions array
+        ENDIF
+      ENDWHILE
+      return inputEmotions
+    END
+    
+    main
+      alert user with intorduction
+     
+      initialize emotions
+      initialize nouns
+      initialize numbers
+      initialize output to ""
+      intitialize pluralNouns
+      initialize verbs
+      
+      set nouns to enterNouns()
+      set pluralNouns to enterPluralNouns()
+      set verbs to enterVerbs()
+      set numbers to enterNumbers()
+      set emotions to enterEmotions()
+      
+      alert user congratulations
+      
+      compile output from array values
+      
+      display output
+    END
+    
+    call main function
+  END
+  
+  OUTPUTS:
+    alert (different alert types),
+    output (a.k.a story)
+
+
+2c. Defining Diagram for Christmas Mad-Lib
+  
+  INPUTS: 
+    userInput (used in each function as different keyword)
+  
+  PROCESSING:
+  
+  ChristmasMadLib
+    enterNouns
+      initialize counter to 1
+      initialize inputNouns array
+      initialize userInput
+      
+      WHILE counter <= 15
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputNouns array
+        ENDIF
+      ENDWHILE
+      return inputNouns
+    END
+    
+    enterPluralNouns
+      initialize counter to 1
+      initialize inputPluralNouns array
+      initialize userInput
+      
+      WHILE counter <= 8
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputPluralNouns array
+        ENDIF
+      ENDWHILE
+      return inputPluralNouns
+    END
+    
+    enterVerbs
+      initialize counter to 1
+      initialize inputVerbs array
+      initialize userInput
+      
+      WHILE counter <= 4
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputVerbs array
+        ENDIF
+      ENDWHILE
+      return inputVerbs
+    END
+    
+    enterCelebrity
+      initialize counter to 1
+      initialize inputCelebrity array
+      initialize userInput
+      
+      WHILE counter <= 2
+        IF counter is 1 THEN
+          prompt for userInput with intro phrase
+        ELSE
+          prompt for userInput with phrase 2
+        ENDIF
+        IF userInput equal "" or null THEN
+          alert warning
+        ELSE 
+          add userInput to inputCelebrity array
+        ENDIF
+      ENDWHILE
+      return inputCelebrity
+    END
+    
+    main
+      alert user with intorduction
+     
+      initialize celebrity
+      intitialize nouns
+      initialize output to ""
+      intitialize pluralNouns
+      initialize verbs
+      
+      set nouns to enterNouns()
+      set pluralNouns to enterPluralNouns()
+      set verbs to enterVerbs()
+      set celebrity to enterCelebrity()
+      
+      alert user congratulations
+      
+      compile output from array values
+      
+      display output
+    END
+    
+    call main function
+  END
+  
+  OUTPUTS:
+    alert (different alert types),
+    output (a.k.a story)
+  
+  
+3a. Solution Algorithm for Medieval Mad-Lib
+
+  SOLUTION ALGORITHM GOES HERE:
+    
+  MedievalThemedMad-lib
+    
+    enterNouns
+      initialize counter = 1
+      initialize inputNouns = []
+      initialize userInput
+      
+      WHILE counter <= 12
+        IF counter === 1 THEN
+          prompt for userInput with "We will start by entering 12 nouns. Please enter your first noun."
+        ELSE
+          prompt for userInput with "Enter Noun number " + counter + " out of 12:"
+        ENDIF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputNouns.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputNouns
+    END
+    
+    enterPluralNouns
+      initialize counter = 1
+      initialize inputPluralNouns = [];
+      initialize userInput
+      
+      WHILE counter <= 6
+        IF counter === 1 THEN
+          prompt for userInput with "Next, we will enter 6 plural nouns. Please enter your first plural noun."
+        ELSE
+          prompt for userInput with "Enter Plural Noun number " + counter + " out of 6:"
+        END IF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputPluralNouns.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputPluralNouns
+    END
+    
+    enterVerbs
+      initialize counter = 1
+      initialize inputVerbs = []
+      initialize userInput
+      
+      WHILE counter <= 3
+        IF counter === 1 THEN
+          prompt for userInput with "Next, we will enter 3 verbs that endi in \"-ing\". Please enter your first verb."
+        ELSE
+          prompt for userInput with "Enter Verb ending in \"-ing\" number " + counter + " out of 3:"
+        ENDIF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputVerbs.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputVerbs
+    END
+    
+    enterColors
+      initialize counter = 1
+      initialize inputColors = []
+      initialize userInput
+      
+      WHILE counter <= 5
+        IF counter === 1 THEN
+          prompt for userInput with "Finally, we will enter 5 colors. Please enter your first color."
+        ELSE
+          prompt for userInput with "Enter Color number " + counter + " out of 5:"
+        ENDIF
+        IF userInput === "" OR userInput === null
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputColors.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputColors
+    END
+    
+    main
+      introduction alert with " You have selected the Medieval Themed Mad-lib!" +
+          " Please take your time and enter all of the requested information " +
+          " for the best experience. Once all blanks are filled your personal " +
+          "story will display. Have Fun!"
+      
+      initialize colors
+      initialize nouns
+      initialize output = ""
+      initialize pluralNouns
+      initialize verbs
+      
+      nouns = enterNouns()
+      pluralNouns = enterPluralNouns()
+      verbs = enterVerbs()
+      colors = enterColors()
+      
+      alert user with "Congratulations. You have now completed your Mad-Lib." +
+          "I hope you enjoy your story!"
+      
+      output = "Once upon a time in a faraway land there lived a " + nouns[0];
+      output += " and his daughter, the " + nouns[1] + ". They lived in a " + nouns[2] + ".";
+      output += " One evening during dinner, a " + nouns[3] + " stopped by and asked the " + nouns[4];
+      output += " if he could have a jousting " + nouns[5] + ". The " + nouns[6];
+      output += " thought this was a grand idea and invited everyone to attend. All of the " + pluralNouns[0];
+      output += " arrived on their " + pluralNouns[1] + ". Several " + pluralNouns[2];
+      output += " were excited to be there and were " + verbs[0] + " around. Other "; 
+      output += pluralNouns[3] + " were much calmer and were just " + verbs[1];
+      output += ". When the trumpet sounded, it was time to begin. The " + colors[0]; 
+      output += " knight and the " + colors[1] + " knight were the first to compete. ";
+      output += "The first competition was collection of the rings. The " + colors[2];
+      output += " knight requested his " + nouns[7] + " from his " + nouns[8] + ". He asked his ";
+      output += nouns[9] + " to start " + verbs[2] + " and was able to collect all of the rings. The other ";
+      output += colors[3] + " knight was only able to collect three " + pluralNouns[4];
+      output += ". The final part of the competition was called \"" + nouns[10];
+      output += "\", where two knights ride their horses toward each other trying to knock each other off their ";
+      output += nouns[11] + ". It was a great day at the castle for the " + colors[4];
+      output += " knight. He won the tournament and received " + pluralNouns[5]; 
+      output += " from the princess. The End!";
+      
+      display output
+    
+    END
+    
+    call main functions
+    
+  END
+      
+
+
+3b. Solution Algorithm for Outer Space Mad-Lib
+
+  SOLUTION ALGORITHM GOES HERE:
+    
+  OuterSpaceThemedMad-lib
+    
+    enterNouns
+      initialize counter = 1
+      initialize inputNouns = []
+      initialize userInput
+      
+      WHILE counter <= 16
+        IF counter === 1 THEN
+          prompt for userInput with "We will start by entering 16 nouns. Please enter your first noun."
+        ELSE
+          prompt for userInput with "Enter Noun number " + counter + " out of 16:"
+        ENDIF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputNouns.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputNouns
+    END
+    
+    enterPluralNouns
+      initialize counter = 1
+      initialize inputPluralNouns = [];
+      initialize userInput
+      
+      WHILE counter <= 6
+        IF counter === 1 THEN
+          prompt for userInput with "Next, we will enter 6 plural nouns. Please enter your first plural noun."
+        ELSE
+          prompt for userInput with "Enter Plural Noun number " + counter + " out of 6:"
+        END IF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputPluralNouns.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputPluralNouns
+    END
+    
+    enterVerbs
+      initialize counter = 1
+      initialize inputVerbs = []
+      initialize userInput
+      
+      WHILE counter <= 2
+        IF counter === 1 THEN
+          prompt for userInput with "Next, we will enter 2 past tense verbs. Please enter your first verb."
+        ELSE
+          prompt for userInput with "Enter Past tense verb number " + counter + " out of 2:"
+        ENDIF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputVerbs.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputVerbs
+    END
+    
+    enterNumbers
+      initialize counter = 1
+      initialize inputNumbers = []
+      initialize userInput
+      
+      WHILE counter <= 4
+        IF counter === 1 THEN
+          prompt for userInput with "Next, we will enter 4 numbers. Please enter your first number."
+        ELSE
+          prompt for userInput with "Enter Number " + counter + " out of 4:"
+        ENDIF
+        IF userInput === "" OR userInput === null
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE IF userInput = isNaN THEN
+          alert with "Be sure to enter a number. Try again"
+        ELSE
+          inputNumbers.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputNumbers
+    END
+    
+    enterEmotions
+      initialize counter = 1
+      initialize inputEmotions = []
+      initialize userInput
+      
+      WHILE counter <= 4
+        IF counter === 1 THEN
+          prompt for userInput with "Finally, we will enter 4 emotions. Please enter your first emotion."
+        ELSE
+          prompt for userInput with "Enter Emotion number " + counter + " out of 4:"
+        ENDIF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputEmotions.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputEmotions
+    END
+    
+    main
+      introduction alert with " You have selected the Outer Space Themed Mad-lib!" +
+          " Please take your time and enter all of the requested information " +
+          " for the best experience. Once all blanks are filled your personal " +
+          "story will display. Have Fun!"
+      
+      initialize emotions
+      initialize nouns
+      initialize numbers
+      initialize output = ""
+      initialize pluralNouns
+      initialize verbs
+      
+      nouns = enterNouns()
+      pluralNouns = enterPluralNouns()
+      verbs = enterVerbs()
+      numbers = enterNumbers()
+      emotions = enterEmotions()
+      
+      alert with "Congratulations. You have now completed your Mad-Lib." +
+          "I hope you enjoy your story!"
+      
+      output = "The year is 300" + numbers[0] + ". It has been " + numbers[1]; 
+      output += " years since I embarked on this outer space exploration in search of ";
+      output += pluralNouns[0] + ". This was my first space expedition. I remeber initially feeling ";
+      output += emotions[0] + " but at this point I just feel " + emotions[1] + "."; 
+      output += " I have traveled the length of over a million " + nouns[0] + "s from Earth, ";
+      output += " with just my " + nouns[1] + " by my side. I am starting to realize we may never find " + pluralNouns[1];
+      output += ". I new when I started this " + nouns[2] + " that the job would not be easy.";
+      output += " Our first task was to explore the planet named " + nouns[3] + " but we soon learned that the planet was inhabitted by ";
+      output += nouns[4] + " creatures and their enitre language was only one word, \"" + nouns[5];
+      output += "\". They were friendly but we could find no " + pluralNouns[2]; 
+      output += " on their planet so we " + verbs[0] + " and left the planet for good.";
+      output += " Our next stop was a planet called " + nouns[6] + " that had become controlled by evil " + nouns[7];
+      output += " people. We tried to tell these people that we were " + emotions[2];
+      output += " but they did not care and attacked us. I made it out but they ate my " + nouns[8];
+      output += " while I made my escape. I " + verbs[1] + " into my spaceship, turned on the antigravity " + nouns[9];
+      output += ", but before I could take off, one of the creatures damaged the spaceship\'s ";
+      output += nouns[9] + ". Luckily I was able to get off the planet, but my ship needed to be repaired soon.";
+      output += " I traveled at " + numbers[2] + " miles per hour in a rush to get to a safe planet to start the repairs.";
+      output += " I soon spotted an unknown planet, it looked as though it was covered in green " + nouns[10];
+      output += "s and it was the shape of a giant " + nouns[11] + ". I did not want to stop there, but I had no choice.";
+      output += " As soon as I landed I came face-to-face with a giant " + nouns[12];
+      output += " it looked " + emotions [3] + " but it was friendly, or so I thought.";
+      output += " The creature helped me to fix my ship, and even gave me some " + pluralNouns[3];
+      output += " to eat. But it was a trap. Once I let my guard down, the creature tried to rob ";
+      output += " me and to take all of my " + pluralNouns[4] + ". I had no choice but to to fight back.";
+      output += " In the ruckus, I broke my " + nouns[13] + " and my communication device. ";
+      output += " Eventually, I was able to escape using a " + nouns[14] + " as a weapon.";
+      output += " Now, I am back in space, still searching the galaxy for " + pluralNouns[5];
+      output += ", but now, without my communication device, all I have to talk to for the next " + numbers[3];
+      output += " years, is my " + nouns[15] + ". Wish me luck, I hope to return to Earth soon!";
+      
+      
+      display output
+    
+    END
+    
+    call main functions
+    
+  END
+
+
+3c. Solution Algorithm for Christmas Mad-Lib
+
+  SOLUTION ALGORITHM GOES HERE:
+    
+  ChristmasThemedMad-lib
+    
+    enterNouns
+      initialize counter = 1
+      initialize inputNouns = []
+      initialize userInput
+      
+      WHILE counter <= 15
+        IF counter === 1 THEN
+          prompt for userInput with "We will start by entering 15 nouns. Please enter your first noun."
+        ELSE
+          prompt for userInput with "Enter Noun number " + counter + " out of 15:"
+        ENDIF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputNouns.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputNouns
+    END
+    
+    enterPluralNouns
+      initialize counter = 1
+      initialize inputPluralNouns = [];
+      initialize userInput
+      
+      WHILE counter <= 8
+        IF counter === 1 THEN
+          prompt for userInput with "Next, we will enter 8 plural nouns. Please enter your first plural noun."
+        ELSE
+          prompt for userInput with "Enter Plural Noun number " + counter + " out of 8:"
+        END IF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputPluralNouns.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputPluralNouns
+    END
+    
+    enterVerbs
+      initialize counter = 1
+      initialize inputVerbs = []
+      initialize userInput
+      
+      WHILE counter <= 4
+        IF counter === 1 THEN
+          prompt for userInput with "Next, we will enter 4 verbs. The first one should end in \"-ing\". Please enter your first verb."
+        ELSE IF counter === 2 THEN
+          prompt for userInput with "Now we will enter 3 past tense verbs. Enter your first past tense verb:"
+        ELSE
+          prompt for userInput with "Enter Past Tense Verb number " + counter + " out of 4:"
+        ENDIF
+        IF userInput === "" OR userInput === null THEN
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputVerbs.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputVerbs
+    END
+    
+    enterCelebrity
+      initialize counter = 1
+      initialize inputCelebrity = []
+      initialize userInput
+      
+      WHILE counter <= 2
+        IF counter === 1 THEN
+          prompt for userInput with "Finally, we will enter 2 celebrity names. Please enter your first celebrity."
+        ELSE
+          prompt for userInput with "Enter Celebrity number " + counter + " out of 2:"
+        ENDIF
+        IF userInput === "" OR userInput === null
+          alert with "Be sure to fill in all prompts. Try again"
+        ELSE
+          inputCelebrity.push = userInput
+          counter++
+        ENDIF
+      ENDWHILE
+      
+      return inputCelebrity
+    END
+    
+    main
+      introduction alert with " You have selected the Christmas Themed Mad-lib!" +
+          " Please take your time and enter all of the requested information " +
+          " for the best experience. Once all blanks are filled your personal " +
+          "story will display. Have Fun!"
+      
+      initialize celebrity
+      initialize nouns
+      initialize output = ""
+      initialize pluralNouns
+      initialize verbs
+      
+      nouns = enterNouns()
+      pluralNouns = enterPluralNouns()
+      verbs = enterVerbs()
+      celebrity = enterCelebrity()
+      
+      alert with "Congratulations. You have now completed your Mad-Lib." +
+          "I hope you enjoy your story!"
+      
+      output = "Twas the night before Christmas, when all through the " + nouns[0];
+      output += ", not a " + nouns[1] + " was " + verbs[0] + " not even a " + nouns[2] + ".";
+      output += " The " + pluralNouns[0] + " were hung by the " + nouns[3];
+      output += " with care, In hopes that " + celebrity[0] + " soon would be there. ";
+      output += "The " + pluralNouns[1] + " were nestled all snug in their " + nouns[4] + ",";
+      output += " while visions of " + nouns[5] + "s danced in their heads. And mamma in her ";
+      output += nouns[6] + ", and I in my " + nouns[7] + ", had just settled down for a long winter's nap";
+      output += ". When out on the " + nouns[8] + " there arose such a clatter, I sprang from the ";
+      output += nouns[9] + " to see what was the matter. Away to the window I " + verbs[1];
+      output += " like a flash, tore open the " + pluralNouns[2] + " and threw up the " + nouns[10];
+      output += ". When, what to my wondering " + pluralNouns[3] + " should appear, but a miniature ";
+      output += nouns[11] + ", and eight tiny " + pluralNouns[4] + ".";
+      output += " I knew in a moment it must be " + celebrity[1] + ".";
+      output += " They were dressed all in " + pluralNouns[5] + " from their head to their " + pluralNouns[6];
+      output += ". They spoke not a word, but went straight to work. They filled all the ";
+      output += pluralNouns[7] + " then turned with a jerk. And laying their " + nouns[12];
+      output += " aside of their " + nouns[13] + " up the chimney they " + verbs [2] + "!";
+      output += " As they " + verbs[3] + " away I heard them exlaim \"Merry Christmas to all, and to all a good ";
+      output += nouns[14] + ".\" The End!";
+      
+      display output
+    
+    END
+    
+    call main functions
+    
+  END
+
+
+
+4a. Checking the Solution Algorithm for Medieval Mad-Lib
+
+VARIABLES: 
+  (certain variables used multiple times in different functions)
+  colors, counter, inputColors, inputNouns, inputPluralNouns, inputVerbs, nouns,
+  output, pluralNouns, verbs, userInput
+  
+
+TEST CASE 1:
+  
+  INPUT VALUES:
+    "noun1",
+    "noun2",
+    "noun3",
+    "noun4",
+    "noun5",
+    "noun6",
+    "noun7",
+    "noun8",
+    "noun9",
+    "noun10",
+    "noun11",
+    "noun12",
+    "pluralNoun1",
+    "pluralNoun2",
+    "pluralNoun3",
+    "pluralNoun4",
+    "pluralNoun5",
+    "pluralNoun6",
+    "verb1",
+    "verb2",
+    "verb3",
+    "color1",
+    "color2",
+    "color3",
+    "color4",
+    "color5"
+  
+  EXPECTED RESULT:
+    "Once upon a time in a faraway land there lived a noun1 and his daughter," 
+    "the noun2. They lived in a noun3. One evening during dinner, a noun4" 
+    "stopped by and asked the noun5 if he could have a jousting noun6. The noun7" 
+    "thought this was a grand idea and invited everyone to attend. All of the" 
+    "pluralNoun1 arrived on their pluralNoun2. Several pluralNoun3 were excited" 
+    "to be there and were verb1 around. Other pluralNoun4 were much calmer and" 
+    "were just verb2. When the trumpet sounded, it was time to begin. The color1" 
+    "knight and the color2 knight were the first to compete. The first competition" 
+    "was collection of the rings. The color3 knight requested his noun8 from his" 
+    "noun9. He asked his noun10 to start verb3 and was able to collect all of the" 
+    "rings. The other color4 knight was only able to collect three pluralNoun5." 
+    "The final part of the competition was called "noun11", where two knights"
+    "ride their horses toward each other trying to knock each other off their" 
+    "noun12. It was a great day at the castle for the color5 knight. He won" 
+    "the tournament and received pluralNoun6 from the princess. The End!" 
+  
+  ACTUAL RESULT:
+    "Once upon a time in a faraway land there lived a noun1 and his daughter," 
+    "the noun2. They lived in a noun3. One evening during dinner, a noun4" 
+    "stopped by and asked the noun5 if he could have a jousting noun6. The noun7" 
+    "thought this was a grand idea and invited everyone to attend. All of the" 
+    "pluralNoun1 arrived on their pluralNoun2. Several pluralNoun3 were excited" 
+    "to be there and were verb1 around. Other pluralNoun4 were much calmer and" 
+    "were just verb2. When the trumpet sounded, it was time to begin. The color1" 
+    "knight and the color2 knight were the first to compete. The first competition" 
+    "was collection of the rings. The color3 knight requested his noun8 from his" 
+    "noun9. He asked his noun10 to start verb3 and was able to collect all of the" 
+    "rings. The other color4 knight was only able to collect three pluralNoun5." 
+    "The final part of the competition was called "noun11", where two knights"
+    "ride their horses toward each other trying to knock each other off their" 
+    "noun12. It was a great day at the castle for the color5 knight. He won" 
+    "the tournament and received pluralNoun6 from the princess. The End!" 
+  
+TEST CASE 2:
+  
+  INPUT VALUES:
+    "" or null (hitting 'ok' button or 'cancel' button)
+  
+  EXPECTED RESULT:
+    (alert box) "Be sure to fill in all prompts. Try again"
+  
+  ACTUAL RESULT:
+    (alert box) "Be sure to fill in all prompts. Try again"
+  
+TEST CASE 3:
+  
+  INPUT VALUES:
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123",
+    "123"
+  
+  EXPECTED RESULT:
+    "Once upon a time in a faraway land there lived a 123 and his daughter, the" 
+    "123. They lived in a 123. One evening during dinner, a 123 stopped by and" 
+    "asked the 123 if he could have a jousting 123. The 123 thought this was a" 
+    "grand idea and invited everyone to attend. All of the 123 arrived on their" 
+    "123. Several 123 were excited to be there and were 123 around. Other 123" 
+    "were much calmer and were just 123. When the trumpet sounded, it was time" 
+    "to begin. The 123 knight and the 123 knight were the first to compete. The" 
+    "first competition was collection of the rings. The 123 knight requested" 
+    "his 123 from his 123. He asked his 123 to start 123 and was able to collect" 
+    "all of the rings. The other 123 knight was only able to collect three 123." 
+    "The final part of the competition was called "123", where two knights ride" 
+    "their horses toward each other trying to knock each other off their 123." 
+    "It was a great day at the castle for the 123 knight. He won the tournament" 
+    "and received 123 from the princess. The End!"
+  
+  ACTUAL RESULT:
+    "Once upon a time in a faraway land there lived a 123 and his daughter, the" 
+    "123. They lived in a 123. One evening during dinner, a 123 stopped by and" 
+    "asked the 123 if he could have a jousting 123. The 123 thought this was a" 
+    "grand idea and invited everyone to attend. All of the 123 arrived on their" 
+    "123. Several 123 were excited to be there and were 123 around. Other 123" 
+    "were much calmer and were just 123. When the trumpet sounded, it was time" 
+    "to begin. The 123 knight and the 123 knight were the first to compete. The" 
+    "first competition was collection of the rings. The 123 knight requested" 
+    "his 123 from his 123. He asked his 123 to start 123 and was able to collect" 
+    "all of the rings. The other 123 knight was only able to collect three 123." 
+    "The final part of the competition was called "123", where two knights ride" 
+    "their horses toward each other trying to knock each other off their 123." 
+    "It was a great day at the castle for the 123 knight. He won the tournament" 
+    "and received 123 from the princess. The End!"
+  
+TEST CASE 4:
+  
+  INPUT VALUES:
+    "cat",
+    "dog",
+    "bird",
+    "fish",
+    "horse",
+    "cow",
+    "computer",
+    "monitor",
+    "keyboard",
+    "desk",
+    "phone",
+    "notebook",
+    "pencils",
+    "pens",
+    "pictures",
+    "books",
+    "men",
+    "women",
+    "walking",
+    "jumping",
+    "kicking",
+    "red",
+    "blue",
+    "green",
+    "yellow",
+    "orange"
+  
+  EXPECTED RESULT:
+    "Once upon a time in a faraway land there lived a cat and his daughter," 
+    "the dog. They lived in a bird. One evening during dinner, a fish stopped" 
+    "by and asked the horse if he could have a jousting cow. The computer" 
+    "thought this was a grand idea and invited everyone to attend. All of the" 
+    "pencils arrived on their pens. Several pictures were excited to be there" 
+    "and were walking around. Other books were much calmer and were just" 
+    "jumping. When the trumpet sounded, it was time to begin. The red knight" 
+    "and the blue knight were the first to compete. The first competition was" 
+    "collection of the rings. The green knight requested his monitor from his" 
+    "keyboard. He asked his desk to start kicking and was able to collect all" 
+    "of the rings. The other yellow knight was only able to collect three men." 
+    "The final part of the competition was called "phone", where two knights" 
+    "ride their horses toward each other trying to knock each other off their" 
+    "notebook. It was a great day at the castle for the orange knight. He won" 
+    "the tournament and received women from the princess. The End!" 
+  
+  ACTUAL RESULT:
+   "Once upon a time in a faraway land there lived a cat and his daughter," 
+    "the dog. They lived in a bird. One evening during dinner, a fish stopped" 
+    "by and asked the horse if he could have a jousting cow. The computer" 
+    "thought this was a grand idea and invited everyone to attend. All of the" 
+    "pencils arrived on their pens. Several pictures were excited to be there" 
+    "and were walking around. Other books were much calmer and were just" 
+    "jumping. When the trumpet sounded, it was time to begin. The red knight" 
+    "and the blue knight were the first to compete. The first competition was" 
+    "collection of the rings. The green knight requested his monitor from his" 
+    "keyboard. He asked his desk to start kicking and was able to collect all" 
+    "of the rings. The other yellow knight was only able to collect three men." 
+    "The final part of the competition was called "phone", where two knights" 
+    "ride their horses toward each other trying to knock each other off their" 
+    "notebook. It was a great day at the castle for the orange knight. He won" 
+    "the tournament and received women from the princess. The End!" 
+
+
+4b. Checking the Solution Algorithm for Outer Space Mad-Lib
+
+VARIABLES: 
+  (certain variables used multiple times in different functions)
+  counter, emotions, inputEmotions, inputNouns, inputNumbers, inputPluralNouns, 
+  inputVerbs, nouns, numbers, output, pluralNouns, userInput, verbs
+  
+
+TEST CASE 1:
+  
+  INPUT VALUES:
+    "noun1",
+    "noun2",
+    "noun3",
+    "noun4",
+    "noun5",
+    "noun6",
+    "noun7",
+    "noun8",
+    "noun9",
+    "noun10",
+    "noun11",
+    "noun12",
+    "noun13",
+    "noun14",
+    "noun15",
+    "noun16",
+    "pluralNoun1",
+    "pluralNoun2",
+    "pluralNoun3",
+    "pluralNoun4",
+    "pluralNoun5",
+    "pluralNoun6",
+    "verb1",
+    "verb2",
+    1,
+    2,
+    3,
+    4,
+    "emotion1",
+    "emotion2",
+    "emotion3",
+    "emotion4"
+  
+  EXPECTED RESULT:
+    "The year is 3001. It has been 2 years since I embarked on this outer space" 
+    "exploration in search of pluralNoun1. This was my first space expedition." 
+    "I remeber initially feeling emotion1 but at this point I just feel" 
+    "emotion2. I have traveled the length of over a million noun1s from" 
+    "Earth, with just my noun2 by my side. I am starting to realize we may" 
+    "never find pluralNoun2. I new when I started this noun3 that the job would" 
+    "not be easy. Our first task was to explore the planet named noun4 but we" 
+    "soon learned that the planet was inhabitted by noun5 creatures and their" 
+    "enitre language was only one word, "noun6". They were friendly but we" 
+    "could find no pluralNoun3 on their planet so we verb1 and left the planet" 
+    "for good. Our next stop was a planet called noun7 that had become" 
+    "controlled by evil noun8 people. We tried to tell these people that we" 
+    "were emotion3 but they did not care and attacked us. I made it out but" 
+    "they ate my noun9 while I made my escape. I verb2 into my spaceship, turned" 
+    "on the antigravity noun10, but before I could take off, one of the" 
+    "creatures damaged the spaceship's noun10. Luckily I was able to get off" 
+    "the planet, but my ship needed to be repaired soon. I traveled at 3 miles" 
+    "per hour in a rush to get to a safe planet to start the repairs. I soon" 
+    "spotted an unknown planet, it looked as though it was covered in green" 
+    "noun11s and it was the shape of a giant noun12. I did not want to stop" 
+    "there, but I had no choice. As soon as I landed I came face-to-face with" 
+    "a giant noun13 it looked emotion4 but it was friendly, or so I thought." 
+    "The creature helped me to fix my ship, and even gave me some pluralNoun4" 
+    "to eat. But it was a trap. Once I let my guard down, the creature tried to" 
+    "rob me and to take all of my pluralNoun5. I had no choice but to to fight" 
+    "back. In the ruckus, I broke my noun14 and my communication device." 
+    "Eventually, I was able to escape using a noun15 as a weapon. Now, I am" 
+    "back in space, still searching the galaxy for pluralNoun6, but now," 
+    "without my communication device, all I have to talk to for the next 4" 
+    "years, is my noun16. Wish me luck, I hope to return to Earth soon!" 
+  
+  ACTUAL RESULT:
+    "The year is 3001. It has been 2 years since I embarked on this outer space" 
+    "exploration in search of pluralNoun1. This was my first space expedition." 
+    "I remeber initially feeling emotion1 but at this point I just feel" 
+    "emotion2. I have traveled the length of over a million noun1s from" 
+    "Earth, with just my noun2 by my side. I am starting to realize we may" 
+    "never find pluralNoun2. I new when I started this noun3 that the job would" 
+    "not be easy. Our first task was to explore the planet named noun4 but we" 
+    "soon learned that the planet was inhabitted by noun5 creatures and their" 
+    "enitre language was only one word, "noun6". They were friendly but we" 
+    "could find no pluralNoun3 on their planet so we verb1 and left the planet" 
+    "for good. Our next stop was a planet called noun7 that had become" 
+    "controlled by evil noun8 people. We tried to tell these people that we" 
+    "were emotion3 but they did not care and attacked us. I made it out but" 
+    "they ate my noun9 while I made my escape. I verb2 into my spaceship, turned" 
+    "on the antigravity noun10, but before I could take off, one of the" 
+    "creatures damaged the spaceship's noun10. Luckily I was able to get off" 
+    "the planet, but my ship needed to be repaired soon. I traveled at 3 miles" 
+    "per hour in a rush to get to a safe planet to start the repairs. I soon" 
+    "spotted an unknown planet, it looked as though it was covered in green" 
+    "noun11s and it was the shape of a giant noun12. I did not want to stop" 
+    "there, but I had no choice. As soon as I landed I came face-to-face with" 
+    "a giant noun13 it looked emotion4 but it was friendly, or so I thought." 
+    "The creature helped me to fix my ship, and even gave me some pluralNoun4" 
+    "to eat. But it was a trap. Once I let my guard down, the creature tried to" 
+    "rob me and to take all of my pluralNoun5. I had no choice but to to fight" 
+    "back. In the ruckus, I broke my noun14 and my communication device." 
+    "Eventually, I was able to escape using a noun15 as a weapon. Now, I am" 
+    "back in space, still searching the galaxy for pluralNoun6, but now," 
+    "without my communication device, all I have to talk to for the next 4" 
+    "years, is my noun16. Wish me luck, I hope to return to Earth soon!" 
+  
+TEST CASE 2:
+  
+  INPUT VALUES:
+    "" or null (hitting 'ok' button or 'cancel' button)
+  
+  EXPECTED RESULT:
+    (alert box) "Be sure to fill in all prompts. Try again"
+  
+  ACTUAL RESULT:
+    (alert box) "Be sure to fill in all prompts. Try again"
+  
+TEST CASE 3:
+  
+  INPUT VALUES:
+    "noun1",
+    "noun2",
+    "noun3",
+    "noun4",
+    "noun5",
+    "noun6",
+    "noun7",
+    "noun8",
+    "noun9",
+    "noun10",
+    "noun11",
+    "noun12",
+    "noun13",
+    "noun14",
+    "noun15",
+    "noun16",
+    "pluralNoun1",
+    "pluralNoun2",
+    "pluralNoun3",
+    "pluralNoun4",
+    "pluralNoun5",
+    "pluralNoun6",
+    "verb1",
+    "verb2",
+    "abc" (trying to enter string in Number prompt)
+  
+  EXPECTED RESULT:
+    (alert box) "Be sure to enter a number. Try again"
+  
+  ACTUAL RESULT:
+    (alert box) "Be sure to enter a number. Try again"
+  
+TEST CASE 4:
+  
+  INPUT VALUES:
+    "cat",
+    "dog",
+    "fish",
+    "bird",
+    "horse",
+    "cow",
+    "chicken",
+    "duck",
+    "bunny",
+    "goat",
+    "candy",
+    "sign",
+    "board",
+    "car",
+    "plant",
+    "flower",
+    "radios",
+    "rings",
+    "puppies",
+    "kittens",
+    "beds",
+    "floors",
+    "swam",
+    "ran",
+    23,
+    1000,
+    99,
+    400,
+    "hungry",
+    "tired",
+    "furious",
+    "jovial"
+  
+  EXPECTED RESULT:
+    "The year is 30023. It has been 1000 years since I embarked on this outer" 
+    "space exploration in search of radios. This was my first space expedition." 
+    "I remeber initially feeling hungry but at this point I just feel tired. I" 
+    "have traveled the length of over a million cats from Earth, with just my" 
+    "dog by my side. I am starting to realize we may never find rings. I new" 
+    "when I started this fish that the job would not be easy. Our first task" 
+    "was to explore the planet named bird but we soon learned that the planet" 
+    "was inhabitted by horse creatures and their enitre language was only one" 
+    "word, "cow". They were friendly but we could find no puppies on their" 
+    "planet so we swam and left the planet for good. Our next stop was a planet" 
+    "called chicken that had become controlled by evil duck people. We tried to" 
+    "tell these people that we were furious but they did not care and attacked" 
+    "us. I made it out but they ate my bunny while I made my escape. I ran into" 
+    "my spaceship, turned on the antigravity goat, but before I could take off," 
+    "one of the creatures damaged the spaceship's goat. Luckily I was able to" 
+    "get off the planet, but my ship needed to be repaired soon. I traveled at" 
+    "99 miles per hour in a rush to get to a safe planet to start the repairs." 
+    "I soon spotted an unknown planet, it looked as though it was covered in" 
+    "green candys and it was the shape of a giant sign. I did not want to stop" 
+    "there, but I had no choice. As soon as I landed I came face-to-face with a" 
+    "giant board it looked jovial but it was friendly, or so I thought. The" 
+    "creature helped me to fix my ship, and even gave me some kittens to eat." 
+    "But it was a trap. Once I let my guard down, the creature tried to rob me"
+    "and to take all of my beds. I had no choice but to to fight back. In the" 
+    "ruckus, I broke my car and my communication device. Eventually, I was able" 
+    "to escape using a plant as a weapon. Now, I am back in space, still" 
+    "searching the galaxy for floors, but now, without my communication device," 
+    "all I have to talk to for the next 400 years, is my flower. Wish me luck," 
+    "I hope to return to Earth soon!" 
+  
+  ACTUAL RESULT:
+    "The year is 30023. It has been 1000 years since I embarked on this outer" 
+    "space exploration in search of radios. This was my first space expedition." 
+    "I remeber initially feeling hungry but at this point I just feel tired. I" 
+    "have traveled the length of over a million cats from Earth, with just my" 
+    "dog by my side. I am starting to realize we may never find rings. I new" 
+    "when I started this fish that the job would not be easy. Our first task" 
+    "was to explore the planet named bird but we soon learned that the planet" 
+    "was inhabitted by horse creatures and their enitre language was only one" 
+    "word, "cow". They were friendly but we could find no puppies on their" 
+    "planet so we swam and left the planet for good. Our next stop was a planet" 
+    "called chicken that had become controlled by evil duck people. We tried to" 
+    "tell these people that we were furious but they did not care and attacked" 
+    "us. I made it out but they ate my bunny while I made my escape. I ran into" 
+    "my spaceship, turned on the antigravity goat, but before I could take off," 
+    "one of the creatures damaged the spaceship's goat. Luckily I was able to" 
+    "get off the planet, but my ship needed to be repaired soon. I traveled at" 
+    "99 miles per hour in a rush to get to a safe planet to start the repairs." 
+    "I soon spotted an unknown planet, it looked as though it was covered in" 
+    "green candys and it was the shape of a giant sign. I did not want to stop" 
+    "there, but I had no choice. As soon as I landed I came face-to-face with a" 
+    "giant board it looked jovial but it was friendly, or so I thought. The" 
+    "creature helped me to fix my ship, and even gave me some kittens to eat." 
+    "But it was a trap. Once I let my guard down, the creature tried to rob me"
+    "and to take all of my beds. I had no choice but to to fight back. In the" 
+    "ruckus, I broke my car and my communication device. Eventually, I was able" 
+    "to escape using a plant as a weapon. Now, I am back in space, still" 
+    "searching the galaxy for floors, but now, without my communication device," 
+    "all I have to talk to for the next 400 years, is my flower. Wish me luck," 
+    "I hope to return to Earth soon!" 
+
+
+4c. Checking the Solution Algorithm for Christmas Mad-Lib
+
+VARIABLES:
+  (certain variables used multiple times in different functions)
+  celebrity, counter, inputCelebrity, inputNouns, inputPluralNouns, 
+  inputVerbs, nouns, output, pluralNouns, userInput, verbs
+
+TEST CASE 1:
+  
+  INPUT VALUES:
+    "noun1",
+    "noun2",
+    "noun3",
+    "noun4",
+    "noun5",
+    "noun6",
+    "noun7",
+    "noun8",
+    "noun9",
+    "noun10",
+    "noun11",
+    "noun12",
+    "noun13",
+    "noun14",
+    "noun15",
+    "pluralNoun1",
+    "pluralNoun2",
+    "pluralNoun3",
+    "pluralNoun4",
+    "pluralNoun5",
+    "pluralNoun6",
+    "pluralNoun7",
+    "pluralNoun8",
+    "verb1",
+    "verb2",
+    "verb3",
+    "verb4",
+    "celebrity1",
+    "celebrity2"
+  
+  EXPECTED RESULT:
+    "Twas the night before Christmas, when all through the noun1, not a noun2"
+    "was verb1 not even a noun3.The pluralNoun1 were hung by the noun4 with" 
+    "care, In hopes that celebrity1 soon would be there.The pluralNoun2 were" 
+    "nestled all snug in their noun5, while visions of noun6s danced in their" 
+    "heads. And mamma in her noun7, and I in my noun8, had just settled down" 
+    "for a long winter's nap. When out on the noun9 there arose such a clatter," 
+    "I sprang from the noun10 to see what was the matter. Away to the window I" 
+    "verb2 like a flash, tore open the pluralNoun3 and threw up the noun11." 
+    "When, what to my wondering pluralNoun4 should appear, but a miniature" 
+    "noun12, and eight tiny pluralNoun5. I knew in a moment it must be" 
+    "celebrity2. They were dressed all in pluralNoun6 from their head to their" 
+    "pluralNoun7. They spoke not a word, but went straight to work. They filled" 
+    "all the pluralNoun8 then turned with a jerk. And laying their noun13 aside" 
+    "of their noun14 up the chimney they verb3! As they verb4 away I heard them" 
+    "exlaim "Merry Christmas to all, and to all a good noun15." The End!" 
+  
+  ACTUAL RESULT:
+    "Twas the night before Christmas, when all through the noun1, not a noun2"
+    "was verb1 not even a noun3.The pluralNoun1 were hung by the noun4 with" 
+    "care, In hopes that celebrity1 soon would be there.The pluralNoun2 were" 
+    "nestled all snug in their noun5, while visions of noun6s danced in their" 
+    "heads. And mamma in her noun7, and I in my noun8, had just settled down" 
+    "for a long winter's nap. When out on the noun9 there arose such a clatter," 
+    "I sprang from the noun10 to see what was the matter. Away to the window I" 
+    "verb2 like a flash, tore open the pluralNoun3 and threw up the noun11." 
+    "When, what to my wondering pluralNoun4 should appear, but a miniature" 
+    "noun12, and eight tiny pluralNoun5. I knew in a moment it must be" 
+    "celebrity2. They were dressed all in pluralNoun6 from their head to their" 
+    "pluralNoun7. They spoke not a word, but went straight to work. They filled" 
+    "all the pluralNoun8 then turned with a jerk. And laying their noun13 aside" 
+    "of their noun14 up the chimney they verb3! As they verb4 away I heard them" 
+    "exlaim "Merry Christmas to all, and to all a good noun15." The End!" 
+  
+TEST CASE 2:
+  
+  INPUT VALUES:
+    "" or null (hitting 'ok' button or 'cancel' button)
+  
+  EXPECTED RESULT:
+    (alert box) "Be sure to fill in all prompts. Try again"
+  
+  ACTUAL RESULT:
+    (alert box) "Be sure to fill in all prompts. Try again"
+  
+TEST CASE 3:
+  
+  INPUT VALUES:
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123
+  
+  EXPECTED RESULT:
+    "Twas the night before Christmas, when all through the 123, not a 123 was" 
+    "123 not even a 123.The 123 were hung by the 123 with care, In hopes that" 
+    "123 soon would be there.The 123 were nestled all snug in their 123, while" 
+    "visions of 123s danced in their heads. And mamma in her 123, and I in my" 
+    "123, had just settled down for a long winter's nap. When out on the 123" 
+    "there arose such a clatter, I sprang from the 123 to see what was the" 
+    "matter. Away to the window I 123 like a flash, tore open the 123 and threw" 
+    "up the 123. When, what to my wondering 123 should appear, but a miniature" 
+    "123, and eight tiny 123. I knew in a moment it must be 123. They were" 
+    "dressed all in 123 from their head to their 123. They spoke not a word," 
+    "but went straight to work. They filled all the 123 then turned with a" 
+    "jerk. And laying their 123 aside of their 123 up the chimney they 123!" 
+    "As they 123 away I heard them exlaim "Merry Christmas to all, and to all" 
+    "a good 123." The End!" 
+  
+  ACTUAL RESULT:
+    "Twas the night before Christmas, when all through the 123, not a 123 was" 
+    "123 not even a 123.The 123 were hung by the 123 with care, In hopes that" 
+    "123 soon would be there.The 123 were nestled all snug in their 123, while" 
+    "visions of 123s danced in their heads. And mamma in her 123, and I in my" 
+    "123, had just settled down for a long winter's nap. When out on the 123" 
+    "there arose such a clatter, I sprang from the 123 to see what was the" 
+    "matter. Away to the window I 123 like a flash, tore open the 123 and threw" 
+    "up the 123. When, what to my wondering 123 should appear, but a miniature" 
+    "123, and eight tiny 123. I knew in a moment it must be 123. They were" 
+    "dressed all in 123 from their head to their 123. They spoke not a word," 
+    "but went straight to work. They filled all the 123 then turned with a" 
+    "jerk. And laying their 123 aside of their 123 up the chimney they 123!" 
+    "As they 123 away I heard them exlaim "Merry Christmas to all, and to all" 
+    "a good 123." The End!" 
+    
+TEST CASE 4:
+  
+  INPUT VALUES:
+    "desk",
+    "pencil",
+    "pen",
+    "ruler",
+    "calculator",
+    "protractor",
+    "bookshelf",
+    "game",
+    "poster",
+    "mouse",
+    "keyboard",
+    "chair",
+    "sofa",
+    "soda",
+    "bottle",
+    "houses",
+    "computers",
+    "schools",
+    "cities",
+    "microwaves",
+    "robots",
+    "clouds",
+    "smiles",
+    "dancing",
+    "kicked",
+    "learned",
+    "jumped",
+    "Eddie Van Halen",
+    "Chris Farley"
+  
+  EXPECTED RESULT:
+    "Twas the night before Christmas, when all through the desk, not a pencil" 
+    "was dancing not even a pen. The houses were hung by the ruler with care," 
+    "In hopes that Eddie Van Halen soon would be there. The computers were" 
+    "nestled all snug in their calculator, while visions of protractors danced" 
+    "in their heads. And mamma in her bookshelf, and I in my game, had just" 
+    "settled down for a long winter's nap. When out on the poster there arose" 
+    "such a clatter, I sprang from the mouse to see what was the matter. Away" 
+    "to the window I kicked like a flash, tore open the schools and threw up" 
+    "the keyboard. When, what to my wondering cities should appear, but a" 
+    "miniature chair, and eight tiny microwaves. I knew in a moment it must" 
+    "be Chris Farley. They were dressed all in robots from their head to their" 
+    "clouds. They spoke not a word, but went straight to work. They filled all" 
+    "the smiles then turned with a jerk. And laying their sofa aside of their" 
+    "soda up the chimney they learned! As they jumped away I heard them exlaim"
+    "\"Merry Christmas to all, and to all a good bottle.\" The End!"
+  
+  ACTUAL RESULT:
+    "Twas the night before Christmas, when all through the desk, not a pencil" 
+    "was dancing not even a pen. The houses were hung by the ruler with care," 
+    "In hopes that Eddie Van Halen soon would be there. The computers were" 
+    "nestled all snug in their calculator, while visions of protractors danced" 
+    "in their heads. And mamma in her bookshelf, and I in my game, had just" 
+    "settled down for a long winter's nap. When out on the poster there arose" 
+    "such a clatter, I sprang from the mouse to see what was the matter. Away" 
+    "to the window I kicked like a flash, tore open the schools and threw up" 
+    "the keyboard. When, what to my wondering cities should appear, but a" 
+    "miniature chair, and eight tiny microwaves. I knew in a moment it must" 
+    "be Chris Farley. They were dressed all in robots from their head to their" 
+    "clouds. They spoke not a word, but went straight to work. They filled all" 
+    "the smiles then turned with a jerk. And laying their sofa aside of their" 
+    "soda up the chimney they learned! As they jumped away I heard them exlaim"
+    "\"Merry Christmas to all, and to all a good bottle.\" The End!"
